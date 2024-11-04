@@ -50,7 +50,7 @@ class TestGithubOrgClient(unittest.TestCase):
             mock_org.return_value = payload
             git_det = gitClient('google')
             result = git_det._public_repos_url
-            self.assertEqual(result, True)
+            self.assertEqual(result, payload)
 
     @patch('client.get_json')
     def test_public_repos(self, mock_get_json):
